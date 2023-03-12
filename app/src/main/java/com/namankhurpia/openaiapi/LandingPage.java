@@ -4,6 +4,7 @@ import static java.lang.Thread.sleep;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class LandingPage extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class LandingPage extends AppCompatActivity {
 
         try {
             sleep(2000);
+            startActivity(new Intent(LandingPage.this, Settings.class));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -21,7 +21,7 @@ public class Web_View extends AppCompatActivity {
         mWebView =(WebView)findViewById(R.id.webview);
 
         mWebView.getSettings().setJavaScriptEnabled(true);
-        Toast.makeText(getApplicationContext(), "PDFs may take time to load",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Images may take time to load",Toast.LENGTH_LONG).show();
         mWebView.loadUrl(URL);
 
     }
