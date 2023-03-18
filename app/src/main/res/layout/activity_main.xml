@@ -4,39 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/prompt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:hint="Enter prompt" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="processing"
-        android:id="@+id/processing"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        />
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="40dp"
+        android:text="Start Creating" />
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/white"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="12dp"
+        android:text="Welcome to DALL·E 2·Client" />
+
+    <EditText
+        android:id="@+id/prompt"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="120dp"
-        android:text="SHOW CONTENT"
+        android:background="#2B2B2B"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textAlignment="textStart"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Enter prompt" />
+
+
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:scaleX="1.14"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:background="@null"
+        android:src="@mipmap/generate"
         android:id="@+id/showcontent"
+
         />
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:id="@+id/image"
