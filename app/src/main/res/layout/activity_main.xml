@@ -65,7 +65,7 @@
         app:lottie_speed="2.3"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="350dp"
         app:lottie_loop="true"
         android:visibility="invisible"
         />
