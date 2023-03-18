@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".Settings">
+    android:background="@color/black"
+    tools:context=".Home">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,48 +16,49 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textSize="40dp"
-        android:text="DALL·E 2·Client" />
+        android:text="Welcome to \nDALL·E 2·Client" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DALL·E 2 is an AI system that can create realistic images and art from a description in natural language."
+        android:fontFamily="@font/roboto_light"
         android:textColor="@color/white"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="130dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="50dp"
-        />
+        android:textSize="12dp"
+        android:text="Open sourced project" />
 
-    <TextView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No logins necessary, keep your key safe"
+        android:src="@mipmap/create"
+        android:background="@null"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="180dp"
-        android:textColor="@color/white"
+        android:layout_marginBottom="150dp"
+        android:id="@+id/create"
         />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/personalkey"
+        android:src="@mipmap/settings"
         android:background="@null"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="120dp"
-        android:id="@+id/getpersonalkey"
+        android:layout_marginBottom="90dp"
+        android:id="@+id/settings"
         />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/enterkey"
+        android:src="@mipmap/aboutus"
         android:background="@null"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:id="@+id/addpersonalkey"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/aboutus"
         />
 
 </RelativeLayout>

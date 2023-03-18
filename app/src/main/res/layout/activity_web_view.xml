@@ -7,7 +7,7 @@
     tools:context=".Web_View">
 
     <WebView
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="85dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/webview"
@@ -20,6 +20,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:text="Instructions - Create a new account, then copy and save the key someplace safe, no need to share it with anyone, \nPS - it can we viewed only once."
+        android:layout_marginBottom="30dp"
         />
 
 

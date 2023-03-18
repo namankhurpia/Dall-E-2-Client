@@ -10,8 +10,9 @@ import com.theokanning.openai.service.OpenAiService;
 public class RetrieveTask extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... strings) {
-        String token = System.getenv("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");
-        OpenAiService service = new OpenAiService("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");
+
+        //OpenAiService service = new OpenAiService("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");
+        OpenAiService service = new OpenAiService(strings[1]);
 
         System.out.println("\nCreating completion...");
         CompletionRequest completionRequest = CompletionRequest.builder()

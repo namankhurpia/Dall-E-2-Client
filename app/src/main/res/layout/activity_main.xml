@@ -25,43 +25,57 @@
         android:layout_marginTop="70dp"
         android:layout_marginLeft="20dp"
         android:textSize="12dp"
-        android:text="Welcome to DALL·E 2·Client" />
+        android:text="Get your creative thinking caps on with DALL·E 2·Client" />
 
     <EditText
         android:id="@+id/prompt"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="130dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="120dp"
         android:background="#2B2B2B"
         android:padding="20dp"
+        android:gravity="top"
+        android:singleLine="false"
+        android:inputType="textMultiLine"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textAlignment="textStart"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:hint="Enter prompt" />
+        android:hint="Try: Multicolored galaxy with stars and moons, generate a realistic 4k image" />
 
 
 
     <ImageButton
         android:layout_width="match_parent"
-        android:scaleX="1.14"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="270dp"
         android:background="@null"
         android:src="@mipmap/generate"
         android:id="@+id/showcontent"
-
         />
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/animation"
+        app:lottie_autoPlay="true"
+        app:lottie_speed="2.3"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+
+        android:layout_marginTop="400dp"
+        app:lottie_loop="true"
+        android:visibility="invisible"
+        />
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/image"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginTop="350dp"/>
 
 </RelativeLayout>

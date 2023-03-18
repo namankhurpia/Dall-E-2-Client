@@ -39,4 +39,5 @@ dependencies {
 
     implementation group: 'com.squareup.retrofit', name: 'retrofit', version: '2.0.0-beta2'
     implementation 'com.theokanning.openai-gpt3-java:service:0.10.0'
+    implementation "com.airbnb.android:lottie:3.4.0"
 }
