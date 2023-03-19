@@ -24,12 +24,10 @@ public class AboutUs extends AppCompatActivity {
         checksource = (TextView) findViewById(R.id.sourcecode);
         privacypolicy = (TextView) findViewById(R.id.privacypolicy);
 
-
         portfolio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://platform.openai.com/account/api-keys")));
-
+                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("http://namank.xyz/")));
             }
         });
 
@@ -43,7 +41,7 @@ public class AboutUs extends AppCompatActivity {
         privacypolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://platform.openai.com/account/api-keys")));
+                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("http://namank.xyz/")));
             }
         });
 
