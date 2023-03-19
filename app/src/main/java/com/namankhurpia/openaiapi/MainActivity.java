@@ -14,6 +14,7 @@ import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -22,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.image.CreateImageRequest;
 import com.theokanning.openai.service.OpenAiService;
@@ -39,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
     String res="";
     String prompt = "";
     LottieAnimationView animationView;
+    LottieAnimationView error404;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,39 +58,59 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView)findViewById(R.id.image);
         editText = (EditText)findViewById(R.id.prompt);
         animationView = (LottieAnimationView)findViewById(R.id.animationView);
-
+        View parentLayout = findViewById(android.R.id.content);
+        error404 = (LottieAnimationView) findViewById(R.id.offlineanimation);
 
         showcontent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 prompt = editText.getText().toString().trim();
-                System.out.println("PROMPT is:"+prompt+"///");
+                if (checkForInternet.getInstance(getApplicationContext()).isOnline()) {
+                    error404.setVisibility(View.INVISIBLE);
 
-                if(!TextUtils.isEmpty(prompt))
-                {
-                    animationView.setVisibility(View.VISIBLE);
-                    imageView.setImageBitmap(null);
-                    Toast.makeText(getApplicationContext(),"Fetching content",Toast.LENGTH_SHORT).show();
-
-                    new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            RetrieveTask task = new RetrieveTask();
-                            res = task.doInBackground(prompt, open_ai_key);
-                            System.out.println("OUT -"+res);
-                            new DownloadImageTask((ImageView) findViewById(R.id.image), (LottieAnimationView)findViewById(R.id.animationView)).execute(res);
-
+                    if (!TextUtils.isEmpty(prompt)) {
+                        try {
+                            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
 
-                    }).start();
+                        animationView.setVisibility(View.VISIBLE);
+                        imageView.setImageBitmap(null);
+
+                        Snackbar.make(parentLayout, "Fetching content", Snackbar.LENGTH_SHORT).show();
+
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    RetrieveTask task = new RetrieveTask();
+                                    res = task.doInBackground(prompt, open_ai_key);
+                                    System.out.println("OUT -" + res);
+                                    new DownloadImageTask((ImageView) findViewById(R.id.image), (LottieAnimationView) findViewById(R.id.animationView)).execute(res);
+                                }
+                                catch (Exception e)
+                                {
+                                    Snackbar.make(parentLayout, "Socket Exception, Retry Please", Snackbar.LENGTH_SHORT).show();
+                                    e.printStackTrace();
+                                }
 
 
+                            }
 
+                        }).start();
+
+
+                    } else {
+                        Snackbar.make(parentLayout, "Prompt is empty", Snackbar.LENGTH_SHORT).show();
+                    }
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Prompt is empty", Toast.LENGTH_SHORT).show();
+                    error404.setVisibility(View.VISIBLE);
+                    Snackbar.make(parentLayout, "It seems you are offline", Snackbar.LENGTH_SHORT).show();
                 }
 
 
@@ -97,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(res!="")
+                if(!TextUtils.isEmpty(res))
                 {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(res));
                     startActivity(browserIntent);

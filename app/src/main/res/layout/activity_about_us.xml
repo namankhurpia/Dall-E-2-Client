@@ -61,6 +61,7 @@
         android:textColor="#00BCF8"
         android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
+        android:id="@+id/sourcecode"
         />
 
     <TextView
@@ -71,6 +72,7 @@
         android:textColor="#00BCF8"
         android:layout_marginTop="125dp"
         android:layout_marginLeft="20dp"
+        android:id="@+id/privacypolicy"
         />
 
 
@@ -85,6 +87,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
+        android:id="@+id/portfolio"
         />
 
 </RelativeLayout>

@@ -11,20 +11,7 @@ public class RetrieveTask extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... strings) {
 
-        //OpenAiService service = new OpenAiService("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");
         OpenAiService service = new OpenAiService(strings[1]);
-
-        System.out.println("\nCreating completion...");
-        CompletionRequest completionRequest = CompletionRequest.builder()
-                .model("ada")
-                .prompt("Somebody once told me the world is gonna roll me")
-                .echo(true)
-                .user("testing")
-                .n(3)
-                .build();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            service.createCompletion(completionRequest).getChoices().forEach(System.out::println);
-        }
 
         System.out.println("\nCreating Image...");
         CreateImageRequest request = CreateImageRequest.builder()
@@ -32,7 +19,6 @@ public class RetrieveTask extends AsyncTask<String,Void,String> {
                 .build();
 
         System.out.println("\nImage is located at:");
-        //System.out.println(service.createImage(request).getData().get(0).getUrl());
         return service.createImage(request).getData().get(0).getUrl();
     }
 }
