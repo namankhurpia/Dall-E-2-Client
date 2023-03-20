@@ -33,7 +33,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/namankhurpia/Dall-E-Client")));
-                
+
             }
         });
 
