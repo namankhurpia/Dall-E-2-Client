@@ -64,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Check Source Code"
+        android:text="Check Source Code, Version 1.0"
         android:fontFamily="@font/roboto_light"
         android:textColor="#00BCF8"
         android:layout_marginTop="100dp"
@@ -90,11 +90,11 @@
         android:text="View Portfolio"
         android:fontFamily="@font/roboto_light"
         android:textColor="#00BCF8"
-        android:layout_marginTop="125dp"
+
         android:layout_marginLeft="20dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="50dp"
         android:id="@+id/portfolio"
         />
 
