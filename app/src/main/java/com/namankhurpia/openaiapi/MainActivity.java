@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.theokanning.openai.OpenAiHttpException;
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.image.CreateImageRequest;
 import com.theokanning.openai.service.OpenAiService;
@@ -91,10 +92,23 @@ public class MainActivity extends AppCompatActivity {
                                     System.out.println("OUT -" + res);
                                     new DownloadImageTask((ImageView) findViewById(R.id.image), (LottieAnimationView) findViewById(R.id.animationView)).execute(res);
                                 }
+                                catch(OpenAiHttpException e)
+                                {
+                                    Snackbar.make(parentLayout, "Your text is violating Open-AI policy, Retry with some different words.", Snackbar.LENGTH_SHORT).show();
+                                    e.printStackTrace();
+                                }
                                 catch (Exception e)
                                 {
                                     Snackbar.make(parentLayout, "Socket Exception, Retry Please", Snackbar.LENGTH_SHORT).show();
                                     e.printStackTrace();
+                                }
+                                finally {
+                                    animationView.post(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            animationView.setVisibility(View.INVISIBLE);
+                                        }
+                                    });
                                 }
 
 

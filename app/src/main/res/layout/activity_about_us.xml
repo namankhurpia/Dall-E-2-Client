@@ -41,6 +41,14 @@
 
         />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/openai_1"
+        android:background="@null"
+        android:scaleType="fitXY"
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

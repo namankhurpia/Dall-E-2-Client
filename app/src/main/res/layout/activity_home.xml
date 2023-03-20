@@ -26,7 +26,22 @@
         android:layout_marginTop="130dp"
         android:layout_marginLeft="20dp"
         android:textSize="12dp"
-        android:text="Open sourced project" />
+        android:text="Open sourced project"
+        android:id="@+id/contribute_here"/>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/openai_1"
+        android:background="@null"
+        android:scaleType="fitXY"
+        />
+
+
+
+
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -60,5 +75,17 @@
         android:layout_marginBottom="30dp"
         android:id="@+id/aboutus"
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="#00BCF8"
+        android:layout_marginTop="140dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="12dp"
+        android:text="Contribute here" />
 
 </RelativeLayout>

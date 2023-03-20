@@ -34,14 +34,14 @@ public class AboutUs extends AppCompatActivity {
         checksource.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://platform.openai.com/account/api-keys")));
+                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/namankhurpia/Dall-E-Client")));
             }
         });
 
         privacypolicy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("http://namank.xyz/")));
+                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://namankhurpia.pythonanywhere.com/privacypolicydalleclient/")));
             }
         });
 

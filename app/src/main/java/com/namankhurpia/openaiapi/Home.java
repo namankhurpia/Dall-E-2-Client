@@ -2,16 +2,21 @@ package com.namankhurpia.openaiapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
 
     ImageButton create, aboutus, settings;
+    TextView contributeHere;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +27,15 @@ public class Home extends AppCompatActivity {
         create = (ImageButton) findViewById(R.id.create);
         aboutus =(ImageButton) findViewById(R.id.aboutus);
         settings = (ImageButton) findViewById(R.id.settings);
+        contributeHere = (TextView)findViewById(R.id.contribute_here);
+
+        contributeHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/namankhurpia/Dall-E-Client")));
+                
+            }
+        });
 
         create.setOnClickListener(new View.OnClickListener() {
             @Override
