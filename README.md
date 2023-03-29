@@ -44,28 +44,28 @@ Now Make sure to call the main retrieve function in a new thread, main thread wo
 
 ```
 new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                try {
-                                    RetrieveTask task = new RetrieveTask();
-                                    res = task.doInBackground(prompt, open_ai_key);
-                                    new DownloadImageTask((ImageView) findViewById(R.id.image)).execute(res);
-                                }
-                                catch(OpenAiHttpException e)
-                                {
-                                    e.printStackTrace();
-                                }
-                                catch (Exception e)
-                                {
-                                    e.printStackTrace();
-                                }
-                                finally {
-                                    //your logic
-                                }
+        @Override
+        public void run() {
+            try {
+                RetrieveTask task = new RetrieveTask();
+                res = task.doInBackground(prompt, open_ai_key);
+                new DownloadImageTask((ImageView) findViewById(R.id.image)).execute(res);
+            }
+            catch(OpenAiHttpException e)
+            {
+                e.printStackTrace();
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+            finally {
+                //your logic
+            }
 
-                            }
+        }
 
-                        }).start();
+    }).start();
 ```
 
 Congratulations!, you're all set!
