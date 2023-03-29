@@ -4,7 +4,7 @@ An android client for Dall E API by openAI
 Download for [PlayStore](https://play.google.com/store/apps/details?id=com.namankhurpia.openaiapi)
 
 
-DALL·E 2 is an AI system that can create realistic images and art from a description in natural language.
+DALL·E 2 Client is a Community Maintained client app in Android App that calls [TheoKanning 's API](https://github.com/TheoKanning/openai-java) 
 
 ## STRUCTURE
 
