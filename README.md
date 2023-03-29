@@ -1,10 +1,8 @@
 # Dall-E-Client
 An android client for Dall E API by openAI
 
-Download for playstore here - 
-```
-https://play.google.com/store/apps/details?id=com.namankhurpia.openaiapi
-```
+Download for [PlayStore](https://play.google.com/store/apps/details?id=com.namankhurpia.openaiapi)
+
 
 DALL·E 2 is an AI system that can create realistic images and art from a description in natural language.
 
@@ -35,6 +33,7 @@ git clone the repo using
 git clone https://github.com/namankhurpia/Dall-E-2-Client
 ```
 
+### STEP-1
 Copy the RetrieveTask.java file from -
 ```
 https://github.com/namankhurpia/Dall-E-2-Client/blob/main/app/src/main/java/com/namankhurpia/openaiapi/RetrieveTask.java
@@ -60,6 +59,8 @@ public class RetrieveTask extends AsyncTask<String,Void,String> {
     }
 
 ```
+
+### STEP-2
 
 Now Make sure to call the main retrieve function in a new thread, main thread won't support and might result in ANRs
 
