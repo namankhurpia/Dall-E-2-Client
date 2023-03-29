@@ -1,6 +1,11 @@
 # Dall-E-Client
 An android client for Dall E API by openAI
 
+Download for playstore here - 
+```
+https://play.google.com/store/apps/details?id=com.namankhurpia.openaiapi
+```
+
 DALL·E 2 is an AI system that can create realistic images and art from a description in natural language.
 
 ## STRUCTURE
@@ -22,6 +27,7 @@ UTILITY FUNCTION -
 - RetrieveTask.java (Asynchronous Task for fetching results)
 
 ## USAGE
+- if you want to add the same logic in your code -
 
 git clone the repo using
 
@@ -29,7 +35,40 @@ git clone the repo using
 git clone https://github.com/namankhurpia/Dall-E-2-Client
 ```
 
+Copy the RetrieveTask.java file from -
+```
+https://github.com/namankhurpia/Dall-E-2-Client/blob/main/app/src/main/java/com/namankhurpia/openaiapi/RetrieveTask.java
+```
 
+Now Make sure to call the main retrieve function in a new thread, main thread won't support and might result in ANRs
+
+```
+new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                try {
+                                    RetrieveTask task = new RetrieveTask();
+                                    res = task.doInBackground(prompt, open_ai_key);
+                                    new DownloadImageTask((ImageView) findViewById(R.id.image)).execute(res);
+                                }
+                                catch(OpenAiHttpException e)
+                                {
+                                    e.printStackTrace();
+                                }
+                                catch (Exception e)
+                                {
+                                    e.printStackTrace();
+                                }
+                                finally {
+                                    //your logic
+                                }
+
+                            }
+
+                        }).start();
+```
+
+Congratulations!, you're all set!
 
 
 <img src="https://raw.githubusercontent.com/namankhurpia/Dall-E-Client/main/mockups/Android%20Large%20-%201.png?token=GHSAT0AAAAAABZ35CX7OCM6IF6MSCDYZV5EZAYYXCQ" width="360" height="640">
