@@ -38,6 +38,27 @@ git clone https://github.com/namankhurpia/Dall-E-2-Client
 Copy the RetrieveTask.java file from -
 ```
 https://github.com/namankhurpia/Dall-E-2-Client/blob/main/app/src/main/java/com/namankhurpia/openaiapi/RetrieveTask.java
+
+```
+
+it should look like this -
+
+```
+public class RetrieveTask extends AsyncTask<String,Void,String> {
+    @Override
+    protected String doInBackground(String... strings) {
+
+        OpenAiService service = new OpenAiService(strings[1]);
+
+        System.out.println("\nCreating Image...");
+        CreateImageRequest request = CreateImageRequest.builder()
+                .prompt(strings[0])
+                .build();
+
+        System.out.println("\nImage is located at:");
+        return service.createImage(request).getData().get(0).getUrl();
+    }
+
 ```
 
 Now Make sure to call the main retrieve function in a new thread, main thread won't support and might result in ANRs
