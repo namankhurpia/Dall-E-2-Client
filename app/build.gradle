@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.namankhurpia.openaiapi'
+    namespace 'com.namankhurpia.imagegen'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.namankhurpia.openaiapi"
+        applicationId "com.namankhurpia.imagegen"
         minSdk 21
         targetSdk 33
         versionCode 5

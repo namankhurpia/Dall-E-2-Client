@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi.Activities;
+package com.namankhurpia.imagegen.Activities;
 
 import static java.lang.Thread.sleep;
 
@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.WindowManager;
 
-import com.namankhurpia.openaiapi.R;
+import com.namankhurpia.imagegen.R;
 
 public class LandingPage extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi.utils;
+package com.namankhurpia.imagegen.utils;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;

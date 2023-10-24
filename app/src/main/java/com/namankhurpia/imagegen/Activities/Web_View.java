@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi.Activities;
+package com.namankhurpia.imagegen.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.Toast;
 
-import com.namankhurpia.openaiapi.R;
+import com.namankhurpia.imagegen.R;
 
 public class Web_View extends AppCompatActivity {
 

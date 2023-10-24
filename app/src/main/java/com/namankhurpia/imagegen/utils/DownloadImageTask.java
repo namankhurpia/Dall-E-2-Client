@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi.utils;
+package com.namankhurpia.imagegen.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

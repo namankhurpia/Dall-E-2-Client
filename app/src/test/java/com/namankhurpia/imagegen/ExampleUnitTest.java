@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi;
+package com.namankhurpia.imagegen;
 
 import org.junit.Test;
 

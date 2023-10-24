@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi.Activities;
+package com.namankhurpia.imagegen.Activities;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +16,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.namankhurpia.openaiapi.R;
+import com.namankhurpia.imagegen.R;
 
 public class Settings extends AppCompatActivity {
 

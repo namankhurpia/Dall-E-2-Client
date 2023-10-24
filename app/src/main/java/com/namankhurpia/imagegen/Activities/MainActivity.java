@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi.Activities;
+package com.namankhurpia.imagegen.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,10 +19,10 @@ import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.snackbar.Snackbar;
-import com.namankhurpia.openaiapi.utils.DownloadImageTask;
-import com.namankhurpia.openaiapi.R;
-import com.namankhurpia.openaiapi.utils.RetrieveTask;
-import com.namankhurpia.openaiapi.utils.checkForInternet;
+import com.namankhurpia.imagegen.utils.DownloadImageTask;
+import com.namankhurpia.imagegen.R;
+import com.namankhurpia.imagegen.utils.RetrieveTask;
+import com.namankhurpia.imagegen.utils.checkForInternet;
 import com.theokanning.openai.OpenAiHttpException;
 
 public class MainActivity extends AppCompatActivity {
@@ -144,6 +144,15 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(browserIntent);
                 }
 
+            }
+        });
+
+
+        exception.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://platform.openai.com/account/api-keys"));
+                startActivity(browserIntent);
             }
         });
 

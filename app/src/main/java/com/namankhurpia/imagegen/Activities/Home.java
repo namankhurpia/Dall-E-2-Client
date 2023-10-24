@@ -1,4 +1,4 @@
-package com.namankhurpia.openaiapi.Activities;
+package com.namankhurpia.imagegen.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.namankhurpia.openaiapi.R;
+import com.namankhurpia.imagegen.R;
 
 public class Home extends AppCompatActivity {
 

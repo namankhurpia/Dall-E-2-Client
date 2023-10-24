@@ -1,9 +1,7 @@
-package com.namankhurpia.openaiapi.utils;
+package com.namankhurpia.imagegen.utils;
 
 import android.os.AsyncTask;
-import android.os.Build;
 
-import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.image.CreateImageRequest;
 import com.theokanning.openai.service.OpenAiService;
 
