@@ -6,17 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".Home">
+    tools:context=".Activities.Home">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_light"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
-        android:textSize="40dp"
-        android:text="Welcome to \nDALL·E 2·Client" />
+        android:textSize="30dp"
+        android:text="Welcome to \nImage Generator Client" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,13 +32,6 @@
 
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/openai_1"
-        android:background="@null"
-        android:scaleType="fitXY"
-        />
 
 
 

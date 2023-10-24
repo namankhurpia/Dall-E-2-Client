@@ -17,35 +17,35 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AboutUs"
+            android:name=".Activities.AboutUs"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Home"
+            android:name=".Activities.Home"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Web_View"
+            android:name=".Activities.Web_View"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Settings"
+            android:name=".Activities.Settings"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LandingPage"
+            android:name=".Activities.LandingPage"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -57,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

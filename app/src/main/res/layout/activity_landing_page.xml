@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".LandingPage">
+    tools:context=".Activities.LandingPage">
 
     <ImageView
         android:layout_width="match_parent"
@@ -24,13 +24,13 @@
         android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:textSize="40dp"
-        android:text="DALL·E 2·Client" />
+        android:textSize="30dp"
+        android:text="Image Generator Client" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DALL·E 2 is an AI system that can create realistic images and art from a description in natural language."
+        android:text="This app uses DALL·E for generating images, DALL E is an AI system that can create realistic images and art from a description in natural language."
         android:textColor="@color/white"
         android:layout_marginTop="75dp"
         android:layout_marginLeft="20dp"
